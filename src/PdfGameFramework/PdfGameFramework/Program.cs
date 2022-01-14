@@ -139,7 +139,7 @@ namespace PdfGameFramework
             form.Elements.Add("/Type", new PdfName("/XObject"));
             form.Elements.Add("/FormType", new PdfInteger(1));
             form.Elements.Add("/BBox", new PdfArray(pdf, new PdfInteger(0), new PdfInteger(0), new PdfInteger(150), new PdfInteger(25)));
-            form.CreateStream(UTF8Encoding.UTF8.GetBytes(@"
+            form.CreateStream(Encoding.UTF8.GetBytes(@"
 0.1 0.1 0.2 rg
 0.0 0.0 150 25 re f
 "));
@@ -150,17 +150,16 @@ namespace PdfGameFramework
             pdf.Internals.AddObject(appearanceStream);
 
             var mk = new PdfDictionary(pdf);
-            mk.Elements.Add("/BG", new PdfArray(pdf, new PdfReal(0.1), new PdfReal(0.1), new PdfReal(0.2)));
+            mk.Elements.Add("/BG", new PdfArray(pdf, new PdfReal(r), new PdfReal(g), new PdfReal(b)));
 
             PdfDictionary textfield = new PdfDictionary(pdf);
             textfield.Elements.Add("/FT", new PdfName("/Tx"));
             textfield.Elements.Add("/Subtype", new PdfName("/Widget"));
             textfield.Elements.Add("/T", new PdfString(name));
-            textfield.Elements.Add("/V", new PdfString("Hello World!"));
+            textfield.Elements.Add("/V", new PdfString(""));
             textfield.Elements.Add("/Type", new PdfName("/Annot"));
             textfield.Elements.Add("/AP", appearanceStream);
             textfield.Elements.Add("/Rect", rect);
-            //textfield.Elements.Add("/P", page1);
             textfield.Elements.Add("/MK", mk);
             textfield.Elements.Add("/Ff", new PdfInteger(2));
             return textfield;
