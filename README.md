@@ -9,7 +9,7 @@ The repository itself is .NET Framework console application that creates pdf fil
 ![Divide tab](https://sun9-76.userapi.com/impg/zYRrxdVVLD8TPqafrMvNBv_0qx_qZHiO_ewYWQ/5WlMV0CHyjk.jpg?size=663x701&quality=96&sign=e1faec29f8527c35484dfd2aea476aa2&type=album)
 
 ## How does it work?
-Every matrix element and "button" are inputs. As it is mentioned in "horrifying-pdf-experiments" article, we can't do much with javascript in browser reader. We can't even change the color of inputs, but we can move/resize them, listen for mouse events, show/hide them. In referenced article it is mentioned that moving elements is causing some artifacts and needs a hack, so I tried to use inputs as pixels of a display, like inside of consol or excel games you can easily find in web.
+Every matrix element and "button" are inputs. As it is mentioned in "horrifying-pdf-experiments" article, we can't do much with javascript in browser reader. We can't even change the color of inputs, but we can move/resize them, listen for mouse events, show/hide them. In referenced article it is mentioned that moving elements is causing some artifacts and needs a hack, so I tried to use inputs as pixels of a display, like inside of console or excel games you can easily find in web.
 
 ## Doesn't look impressive
 Also this game itself doesn't look impressive, a lot of things can be done with this approach. We can make different colors by placing inputs on each other, we can listen for mouse inputs. So it has a potential to make any low resolution 2d game, or even 3d with knowledge of algorithms.
